@@ -75,9 +75,9 @@ architecture stoplight_fsm_arch of stoplight_fsm is
     signal f_Q, f_Q_next : std_logic_vector (1 downto 0):= "10";
     
 begin
-	-- CONCURRENT STATEMENTS ----------------------------
+	-- CONCURRENT STATEMENTS -----------------git -----------
 	-- Next state logic
-	f_Q_next(0) <= ((not f_Q(1)) AND i_c); 
+	f_Q_next(0) <= ((NOT f_Q(1)) AND i_c); 
 	f_Q_next(1) <= ((not f_Q(1)) AND f_Q(0) AND (not i_C));
 	
 	-- Output logic
